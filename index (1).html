@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tracking</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      font-family: monospace;
+      text-align: center;
+      margin-top: 20%;
+      font-size: 2em;
+    }
+
+    .blink {
+      animation: blink-animation 0.8s steps(2, start) infinite;
+      -webkit-animation: blink-animation 0.8s steps(2, start) infinite;
+    }
+
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    @-webkit-keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        alert("Camera access granted. You are being watched.");
+      }, 3000);
+    };
+  </script>
+</head>
+<body>
+  <h1 class="blink">YOU ARE BEING TRACKED</h1>
+  <p>We know your location. Stay alert.</p>
+</body>
+</html>
